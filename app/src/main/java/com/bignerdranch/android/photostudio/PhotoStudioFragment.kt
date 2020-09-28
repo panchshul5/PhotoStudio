@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.work.*
 import com.bignerdranch.android.photostudio.*
@@ -59,7 +60,7 @@ class PhotoStudioFragment : VisibleFragment() {
         val view = inflater.inflate(R.layout.fragment_photo_studio, container, false)
 
         photoRecyclerView = view.findViewById(R.id.photo_recycler_view)
-        photoRecyclerView.layoutManager = GridLayoutManager(context, 3)
+        photoRecyclerView.layoutManager = LinearLayoutManager(context)
 
         return view
     }
